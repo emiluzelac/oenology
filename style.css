@@ -1551,12 +1551,24 @@ body.term-post-format-image .post-entry {
   text-decoration:none;
 }
 .post-entry .wp-caption {
-	max-width:635px;
+	max-width:96%;
 	height: auto;
 }
 body.attachment .post-entry .wp-caption,
 body.single-format-image .post-entry .wp-caption {
 	max-width:900px;
+}
+
+img {
+    -ms-interpolation-mode: bicubic;
+    border: 0;
+	height: auto;
+	max-width: 100%;
+    vertical-align: middle;
+}
+
+.post-entry img, .post-entry .wp-caption {
+    max-width: 100% !important;
 }
 
 /* Post Entry - Captions
@@ -2851,3 +2863,101 @@ ol.trackbacklist {
   width:7.5in;
   }
 } /* End @media print */
+
+
+/* =Forms
+-------------------------------------------------------------- */
+area,
+select,
+textarea
+input[type="text"], 
+input[type="password"] {
+    -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	vertical-align: middle;
+	width: 100%;
+}
+
+/* =Responsive (Mobile) Design
+-------------------------------------------------------------- */
+@media screen and (max-width: 980px) {
+
+    body,
+    #extent,
+    #footer {
+        max-width: 96%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    
+    .nav-header,
+    .nav-header li {
+        float: none;
+    }
+    
+    #main {
+        max-width: 100% !important;
+    }
+    
+    #leftcol,
+    #rightcol,
+    #doublecoltop, 
+    #doublecolbottom,
+    #sidebar-doublecol {
+        float: none;
+        padding: 0;
+        width: 100%;
+    }
+    
+    .postnav,
+    #breadcrumbs,
+    #infobabrnav,
+    #postnavlogin,
+    #postnavsearch,
+    #breadcrumbs .crumbs,
+    ol.wp-paginate, ul.page-numbers,
+    .single #breadcrumbs, .page #breadcrumbs {
+        background: none;
+        border: none;
+        display: block;
+        float: none;
+        margin: 0 auto;
+        max-width: 100%;
+        min-width: 0;
+        padding: 0;
+        text-align: center;
+    }
+    
+    h1,
+    div.site-header-text {
+        word-break: break-all;
+    }
+    
+    #page #main, .layout-three-column #main {
+        margin-left: 0;
+    }
+    
+}
+
+@media screen and (max-width: 650px) {
+
+    body {}
+}
+
+@media screen and (max-width: 480px) {
+
+    body {}
+
+}
+
+@media screen and (max-width: 320px) {
+    
+    body {}
+
+}
+
+@media screen and (max-width: 240px) {
+    
+    body {}
+}
